@@ -1,11 +1,21 @@
 * {
-    border: 1px solid red;
+    outline: 1px solid red;
     font-family: "Barlow", sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main {
+    max-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +29,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 30px auto;
 }
 
 button {
@@ -52,6 +63,7 @@ button {
 
 .hero-container {
     max-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 100px;
@@ -62,8 +74,8 @@ button {
 .container {
     max-width: 445px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    padding: 5px;
+    margin: auto;
 }
 
 h1 {
@@ -73,12 +85,35 @@ h1 {
     text-transform: uppercase;
 }
 
-image-container1 {
+.container p {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: medium;
+    color: #7b8bad;
+    margin: 20px 0;
+}
+
+.container span {
+    color: #7b8bad;
+    line-height: 26px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.image-container1 {
     max-width: 100%;
+    margin: auto;
 }
 
 .img1 {
     height: 480px;
     width: 540px;
     border-radius: 15px;
+}
+
+.pattern1 {
+    position: absolute;
+    top: 117px;
+    right: -100px;
+    z-index: -1;
 }
