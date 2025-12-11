@@ -23,13 +23,13 @@ main {
 }
 
 header {
-    max-width: 90%;
+    max-width: 1300px;
     width: 100%;
     height: 58px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px auto;
+    margin: 50px auto;
 }
 
 button {
@@ -62,20 +62,19 @@ button {
 }
 
 .hero-container {
-    max-width: 100%;
+    max-width: 1200px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 100px;
     align-items: center;
     flex-direction: row;
+    margin: 20px auto;
 }
 
 .container {
     max-width: 445px;
     width: 100%;
     padding: 5px;
-    margin: auto;
 }
 
 h1 {
@@ -100,20 +99,78 @@ h1 {
     margin-left: 30px;
 }
 
-.image-container1 {
-    max-width: 100%;
-    margin: auto;
-}
-
 .img1 {
     height: 480px;
     width: 540px;
     border-radius: 15px;
 }
 
-.pattern1 {
+.pattern1 { /*Fix this later so even if user uses wide screen monitor it stays in place*/
     position: absolute;
-    top: 117px;
-    right: -100px;
+    top: 178px;
+    right: 150px;
+    z-index: -1;
+}
+
+.feature-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px;
+}
+
+.image-container1 {
+    background: url(./assets/desktop/image-phone-and-keyboard.jpg) no-repeat center center/cover;
+    width: 255px;
+    height: 480px;
+    border-radius: 15px;
+    position: relative;
+    z-index: -1;
+}
+
+.image-sleeve {
+    background-color: rgba(241, 103, 24, 0.5);
+    width: 255px;
+    height: 480px;
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.img3 {
+    width: 445px;
+    height: 480px;
+    border-radius: 15px;    
+}
+
+.feature {
+    max-width: 255px;
+    width: 100%;
+    padding: 5px;
+    margin: auto;
+}
+
+.feature h2 {
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 900;
+    color: #162542;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+}
+
+.feature p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #7b8bad;
+}
+
+.pattern2 {
+    position: absolute;
+    top: 930px;
+    left: -100px;
     z-index: -1;
 }
