@@ -29,3 +29,31 @@
   inset: 0;
   border-radius: 15px;
 }
+
+Responsive Images (<picture>)
+
+This project uses the HTML <picture> element to load different images based on screen size.
+
+Why <picture>?
+
+Loads only the needed image (better performance)
+
+Semantic and accessible
+
+No CSS hacks
+
+Usage
+<picture>
+  <source media="(max-width: 768px)" srcset="image-mobile.jpg">
+  <source media="(max-width: 1024px)" srcset="image-tablet.jpg">
+  <img src="image-desktop.jpg" alt="Feature image">
+</picture>
+Notes
+
+Order matters: smaller screens first
+
+<img> acts as the desktop fallback
+
+Always include alt text
+
+Recommended for responsive content images.

@@ -10,7 +10,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow-x: hidden;
 }
 
 main {
@@ -20,6 +19,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 header {
@@ -233,7 +233,7 @@ h1 {
 /*Mobile*/
 @media (max-width: 767px) {
     header {
-        max-width: 90%;
+        max-width: 95%;
     }
 
     .hero-container {
@@ -246,13 +246,22 @@ h1 {
         margin: 20px 0;
     }
 
+    h1 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .container p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
     .img1 {
         width: 372px;
         height: 331px;
         margin: 20px 0;
         position: relative;
-        right: -20px;
-        overflow-x: hidden;
+        right: -40px;
     }
 
     .pattern1, .pattern2 {
@@ -267,11 +276,16 @@ h1 {
     }
 
     .image-container1 {
+        background-image: url(./assets/mobile/image-phone-and-keyboard.jpg);
         width: 129px;
         height: 193px;
         order: 1;
         position: relative;
-        left: -20px;
+        left: -25px;
+    }
+
+    picture {
+        order: 1;
     }
 
     .img3 { 
@@ -310,6 +324,65 @@ h1 {
     }
 
     footer {
+        margin: auto;
+    }
+}
+
+/*Tablet*/
+@media (max-width: 1024px) and (min-width: 768px) {
+    header {
+        max-width: 90%;
+    }
+
+    .hero-container {
+        max-width: 95%;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .container {
+        max-width: 340px;
+    }
+
+    h1 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+    
+    .img1 {
+        width: 400px;
+        height: 425px;
+        position: relative;
+        right: -90px;
+    }
+
+    .pattern1, .pattern2 {
+        display: none;
+    }
+
+    .feature-container {
+        max-width: 689px;
+        flex-wrap: wrap;
+    }
+
+    .image-container1 {
+        width: 214px;
+        height: 320px;
+    }
+
+    .img3 {
+        width: 445px;
+        height: 320px;
+    }
+
+    .feature {
+        max-width: 690px;
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+    }
+
+    .feature h2{
         margin: auto;
     }
 }
