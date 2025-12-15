@@ -1,10 +1,12 @@
-### 📘 What I Learned About Image Overlays
+### 📘 What I Learned 
 
 - Use a `position: relative` parent and a `position: absolute` child with `inset: 0` to create a perfect color overlay.
 - Avoid repeating width and height — the overlay automatically matches the parent’s size.
 - Do not use `z-index: -1` because it causes stacking and layout issues; keep the image in normal flow.
 - Use `overflow: hidden` and matching `border-radius` so the overlay clips correctly and follows the image’s shape.
 - This method is clean, responsive, and easier to maintain for future layout changes.
+- This project uses the HTML <picture> element to load different images based on screen size.
+- Loads only the needed image (better performance)
 
 ### 📁 Code Example (Image With Color Overlay)
 
@@ -30,30 +32,9 @@
   border-radius: 15px;
 }
 
-Responsive Images (<picture>)
-
-This project uses the HTML <picture> element to load different images based on screen size.
-
-Why <picture>?
-
-Loads only the needed image (better performance)
-
-Semantic and accessible
-
-No CSS hacks
-
-Usage
+```html
 <picture>
   <source media="(max-width: 768px)" srcset="image-mobile.jpg">
   <source media="(max-width: 1024px)" srcset="image-tablet.jpg">
   <img src="image-desktop.jpg" alt="Feature image">
 </picture>
-Notes
-
-Order matters: smaller screens first
-
-<img> acts as the desktop fallback
-
-Always include alt text
-
-Recommended for responsive content images.
